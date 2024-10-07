@@ -12,12 +12,10 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-
     @GetMapping
     public String greet(){
         return "Server is running";
     }
-
 
     @PostMapping
     public ResponseEntity<Student> createStudent(@RequestBody Student student){
@@ -30,5 +28,4 @@ public class StudentController {
                 .map(student -> ResponseEntity.ok().body(student))
                 .orElse(ResponseEntity.notFound().build());
     }
-
 }
