@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "roles")
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
-public class Roles {
+public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,5 +20,4 @@ public class Roles {
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
     private ERole name;
-
 }
