@@ -28,4 +28,5 @@ public class StudentController {
                 .map(student -> ResponseEntity.ok().body(student))
                 .orElse(ResponseEntity.notFound().build());
     }
+
 }
